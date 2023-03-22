@@ -8,6 +8,7 @@ const Card = (props) => {
   // sukurti funckija kuria iskviesim mygtuko paspaudimu
   // fn
   // jsx dalyje panaudoti "currentClass" kintamaji klase reiksmes vietoje
+  // klases pavadinimas 'special'
   return (
     <UiCard>
       <h2 className=''>Title</h2>
