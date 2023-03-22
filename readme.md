@@ -13,3 +13,13 @@
 
 `<p>Viso zmoniu: XX</p>`
 `<p>Visi zmoniu hobiai: reading, swimming ...</p>`
+
+## Nauja sekcija su zmonemis
+
+url: https://preview.colorlib.com/#nitro
+
+![team](/public/team.png)
+
+1. pasidaryti visa sekcija su komponentais (css mazdaug, labai neuzsizaiskit)
+2. generuoti elementus is objektu masyvo.
+3. padaryti kad paspaudus ant korteles ji taptu darkMode
