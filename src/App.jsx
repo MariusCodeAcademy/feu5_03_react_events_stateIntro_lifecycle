@@ -1,5 +1,6 @@
 import './App.css';
 import CardList from './components/CardList';
+import Counter from './components/Counter';
 import Header from './components/Header';
 
 const arr = ['red', 'green', 'blue'];
@@ -15,9 +16,10 @@ const App = () => {
   return (
     <div>
       <Header />
-      <h1>App</h1>
+      {/*<h1>App</h1>
       <CardList list={arr} />
-      <button onClick={handleClick}>Show alert</button>
+      <button onClick={handleClick}>Show alert</button> */}
+      <Counter />
     </div>
   );
 };

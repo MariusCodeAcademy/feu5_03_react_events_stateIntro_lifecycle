@@ -1,0 +1,9 @@
+.uiCard {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  display: inline-block;
+  padding-top: 0;
+}
