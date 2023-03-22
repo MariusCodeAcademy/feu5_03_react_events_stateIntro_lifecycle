@@ -2,6 +2,7 @@ import './App.css';
 import CardList from './components/CardList';
 import Counter from './components/Counter';
 import Header from './components/Header';
+import PeopleList from './components/PeopleList';
 
 const arr = ['red', 'green', 'blue'];
 
@@ -17,8 +18,9 @@ const App = () => {
     <div>
       <Header />
       <h1>App</h1>
-      <CardList list={arr} />
-      <button onClick={handleClick}>Show alert</button>
+      <PeopleList list={arr} />
+      {/* <CardList list={arr} />
+      <button onClick={handleClick}>Show alert</button> */}
       {/* <Counter />
       <Counter />
       <Counter /> */}
