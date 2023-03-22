@@ -24,6 +24,11 @@ const Counter = () => {
 
   const handleChange = (howMuch) => {
     //
+    if (howMuch === 'reset') {
+      setCount(0);
+      return;
+    }
+    setCount(count + howMuch);
   };
 
   return (
@@ -32,9 +37,9 @@ const Counter = () => {
       <h2>{count}</h2>
       <button onClick={handleIncrement}>Plus</button>
       <button onClick={handleDecrement}>Minus</button>
-      <button>Add 5</button>
-      <button>Add 10</button>
-      <button>Reset Counter</button>
+      <button onClick={() => handleChange(5)}>Add 5</button>
+      <button onClick={() => handleChange(10)}>Add 10</button>
+      <button onClick={() => handleChange('reset')}>Reset Counter</button>
     </UiCard>
   );
 };
