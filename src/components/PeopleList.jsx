@@ -4,8 +4,8 @@ const PeopleList = (props) => {
   // mapinti per gauta sarasa ir gamiti Person componentus
   return (
     <ul>
-      {props.list.map((color) => (
-        <Person key={color} name={color} />
+      {props.list.map((personObj) => (
+        <Person key={personObj.id} name={personObj.name} />
       ))}
     </ul>
   );
