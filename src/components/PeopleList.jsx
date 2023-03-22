@@ -5,7 +5,8 @@ const PeopleList = (props) => {
   // mapinti per gauta sarasa ir gamiti Person componentus
   const zmSk = props.list.length;
   const hobiai = props.list.map((pObj) => pObj.hobby).join(', ');
-
+  const hobReduce = props.list.reduce((str, pObj) => `${str}, ${pObj.hobby}`, '').slice(2);
+  console.log('hobReduce ===', hobReduce);
   console.log('hobiai ===', hobiai);
   let [filtered, setFiltered] = useState([...props.list]);
 
