@@ -4,7 +4,9 @@ import Person from './Person';
 const PeopleList = (props) => {
   // mapinti per gauta sarasa ir gamiti Person componentus
   const zmSk = props.list.length;
-  const hobiai = 'gauti reiksme is props';
+  const hobiai = props.list.map((pObj) => pObj.hobby).join(', ');
+
+  console.log('hobiai ===', hobiai);
   let [filtered, setFiltered] = useState([...props.list]);
 
   return (
@@ -25,7 +27,7 @@ const PeopleList = (props) => {
       <br />
       <div className='info'>
         <p>Viso zmoniu: {zmSk}</p>
-        <p>Visi zmoniu hobiai: reading, swimming ...</p>
+        <p>Visi zmoniu hobiai: {hobiai}</p>
       </div>
     </div>
   );
