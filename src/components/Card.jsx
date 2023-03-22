@@ -7,6 +7,10 @@ const Card = (props) => {
   // sukurti state kintamaji su useState, "currentClass"
   const [currentClass, setCurrentClass] = useState('');
   // sukurti state kintamaji su useState, "title"
+  const [title, setTitle] = useState('Title');
+  const handleTitleChange = () => {
+    setTitle('changed Title');
+  };
   // paspaudus mygtuka <button>ChangeTitle</button> pakeisti title reikme i "changed Title"
   // pradine reiksme ''
   // sukurti funckija kuria iskviesim mygtuko paspaudimu
@@ -18,10 +22,12 @@ const Card = (props) => {
   // klases pavadinimas 'special'
   return (
     <UiCard>
-      <h2 className={currentClass}>Title</h2>
+      <h2 onClick={handleTitleChange} className={currentClass}>
+        {title}
+      </h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
       <button onClick={handleClass}>make special</button>
-      <button>ChangeTitle</button>
+      <button onClick={handleTitleChange}>ChangeTitle</button>
     </UiCard>
   );
 };
