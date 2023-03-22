@@ -4,7 +4,7 @@ import Counter from './components/Counter';
 import Header from './components/Header';
 import PeopleList from './components/PeopleList';
 
-const arr = ['red', 'green', 'blue'];
+const arr = ['tomato', 'green', 'blue', 'violet'];
 
 const App = () => {
   console.log('App ivyko');
