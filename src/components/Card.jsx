@@ -1,19 +1,27 @@
+import { useState } from 'react';
 import UiCard from './ui/UiCard';
 
 const Card = (props) => {
   console.log('Card ivyko');
 
   // sukurti state kintamaji su useState, "currentClass"
+  const [currentClass, setCurrentClass] = useState('');
+  // sukurti state kintamaji su useState, "title"
+  // paspaudus mygtuka <button>ChangeTitle</button> pakeisti title reikme i "changed Title"
   // pradine reiksme ''
   // sukurti funckija kuria iskviesim mygtuko paspaudimu
-  // fn
+  const handleClass = () => {
+    // fn
+    setCurrentClass('special');
+  };
   // jsx dalyje panaudoti "currentClass" kintamaji klase reiksmes vietoje
   // klases pavadinimas 'special'
   return (
     <UiCard>
-      <h2 className=''>Title</h2>
+      <h2 className={currentClass}>Title</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-      <button>make special</button>
+      <button onClick={handleClass}>make special</button>
+      <button>ChangeTitle</button>
     </UiCard>
   );
 };
