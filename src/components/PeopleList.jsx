@@ -8,14 +8,17 @@ const PeopleList = (props) => {
   const hobReduce = props.list.reduce((str, pObj) => `${str}, ${pObj.hobby}`, '').slice(2);
   console.log('hobReduce ===', hobReduce);
   console.log('hobiai ===', hobiai);
-  let [filtered, setFiltered] = useState([...props.list]);
-
+  const [filterBy, setFilterBy] = useState('');
+  let filtered = props.list.filter((pObj) => pObj.gender === filterBy);
+  if (filterBy === '') {
+    filtered = props.list;
+  }
   return (
     <div>
-      <button>vyrai</button>
+      <button onClick={() => setFilterBy('male')}>Vyrai</button>
       <button>Moterys</button>
       <ul>
-        {props.list.map((personObj) => (
+        {filtered.map((personObj) => (
           <Person
             key={personObj.id}
             name={personObj.name}
